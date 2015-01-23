@@ -1,0 +1,41 @@
+body { font-family: Helvetica, Arial, sans-serif; text-align: center;}
+img { margin: 10px; }
+
+/* dummy image styles */
+.dummy {
+  display: inline-block; 
+  position: relative;
+  background: lightgray;
+  content: '';
+  color: lightgray;
+}
+.dummy:after { 
+  content: attr(width) " x " attr(height);
+  white-space: pre;
+  color: gray;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: calc(50% - .5em);
+  top: -webkit-calc(50% - .5em);
+  font-size: 100%;
+}
+.dummy.alt:after {
+  content: attr(alt);
+}
+.dummy.double.alt:after {
+  content: attr(alt) "\A" attr(data-second);
+  white-space: pre;
+  top: calc(50% - 1em);
+  top: -webkit-calc(50% - 1em);
+}
+.dummy.big {
+  font-size: 200%;
+}
+.dummy.small {
+  font-size: 50%;
+}
+.dummy.round { 
+  border-radius: 1em; 
+}
